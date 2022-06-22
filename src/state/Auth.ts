@@ -4,6 +4,7 @@ import { _User } from '../domain/entities';
 
 export interface AuthState {
   user: _User;
+  permissions: string[];
 }
 
 export const authState = atom<AuthState>({
@@ -12,5 +13,6 @@ export const authState = atom<AuthState>({
     user: {
       email: '',
     },
+    permissions: [],
   },
 });
